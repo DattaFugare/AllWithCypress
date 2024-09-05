@@ -1,0 +1,238 @@
+
+
+<h1 align="center">Hi 👋, I'm Dattatray fugare</h1>
+<h3 align="center">A passionate software tester</h3>
+
+
+- 🔭 I’m currently using  **Cypress, k6, GitHub Actions, Jenkins, Docker, AWS**
+
+- 🌱 I’m currently learning **new automation techniques**
+
+- 👯 I’m looking to collaborate on **funcational & non-function**
+
+- 👨‍💻  my projects are available at [https://github.com/DattaFugare](https://github.com/DattaFugare)
+
+- 
+
+- 📫 let Talk about **Testing Process,Cypress,Selenium,Framework SetUp, CI/CD**
+
+- 📫 You can reach me at **dattatrayfugare77@gmail.com**
+
+# Different Cypress Scenarios which we handle in our daily project
+
+  Cypress Examples
+
+1.  Submit the form  without passing click => newTab.js 
+
+     NOTE - Cypress does not support tab. So, we need to follow 2 steps 
+     Step 1. Run **npm install -D cypress-plugin-tab**
+     Step 2. Add **require('cypress-plugin-tab')** at the top of cypress/support/index.js:
+     
+2. Find Text using variables and alias => findText.cy.js
+3. Passing Enter as input value => typeEnter.cy.js
+4. Test Responsiveness, using different viewports => webResponsive.cy.js
+5. Change Different Browsers in test => defineBrowser.cy.js
+6. Open New Tab in cypress => newTab.js
+7. Find the Length of elements on Page => findLength.cy.js
+8. alert Test => alertTest.cy.js
+9. Opening google in different ways => google.cy.js
+10. Check if an element exist on the page => assertion2.cy.js
+11. Upload File using .selectFile() => fileUpload.cy.js
+12. Drag and drop =>dragAndDrop.cy.js
+13. Move Hover using 2 ways: Cypress Command and Third-party plugin => mouseHover.js
+14. broken Links on the page => brokenLink.cy.js
+15. How to find current date => currentDate.cy.js
+16. How to avoid delay while entering text in Cypres => delayExample.cy.js
+17. Disable test in Cypress => disableTest.cy.js
+18. Select a value from dropdown => dropdown.cy.js
+19. Run test based on browser => defineBrowser.cy.js
+20. Pick value based on environment variable in Cypress => envVariable.cy.js
+21. Fetch csv value => fetchCsv.cy.js
+22. Ignore case sensitivity in Cypress => ignoreCaseSensitivity.cy.js
+23. Monkey Test in Cypress => monkeyTest.cy.js
+24. Multi Origin Test in Cypress => multiOrigin.cy.js
+25. Pause Execution in Cypress => pauseExecution.cy.js
+26. How to refresh page in Cypress => refreshPage.cy.js
+27. Perform Scroll in Cypress => scrollInToView.cy.js
+28. Skip test based on browser and operating system => skipTest_conditionalBasis.cy.js
+29. How to access value from different test in Cypress => accessValueFromOtherTest.cy.js , Login.cy.js and sharedFunction.cy.js
+30. Take screenshot of command or screenshot of whole page in Cypress => takeScreenshot.cy.js
+31. Disable image on loading the page in Cypress => imageDisable.cy.js
+32. Handle Exception in Cypress => cypressException.cy.js
+33. Automate home page in Cypress => homePage.cy.js
+34. Handle Pagination in Cypress => paginationTest.cy.js
+35. Read data from Fixture => readFixtures.cy.js
+36. Automate login using data driven approach in Cypress => dataDrivenTest.cy.js
+37. Cypress test genaretad from Cypress STudio => cypress_studio.cy.js
+38. How to test reponsiveness of page in Cypress / Testing on different viewports => webResponsive.cy.js
+39. Test differnt HTTP Methods in Cypress.. Perform API testing => api.cy.js
+40. Handle checkbox in Cypress => checkbox.cy.js
+41. Blur and focus on an element in Cypress => blurAndFocus.cy.js
+42. Read data from Excel in Cypress => readExcelData.cy.js
+ => Run "npm install node-xlsx --save"
+43. How to handle tool tip
+44. How to handle basic auth headers
+
+
+
+
+# Cypress_Read_Data_From_CSV
+Cypress_Read_Data_From_CSV
+
+This project demonstrates how to automate the user registration process in Cypress.
+
+The test data for the registration form is sourced from a CSV (Comma-Separated Values) file, enabling us to test multiple scenarios with ease. 
+Additionally, I have used the Faker API from the Faker.js library to generate unique and random email addresses for each test run.
+
+
+For the set- up, please refer to the medium blog here - 
+https://medium.com/@anshita.bhasin/read-csv-data-in-cypress-57b1792c6945
+
+Ref — https://www.npmjs.com/package/@faker-js/faker, https://npm.io/package/neat-csv
+
+
+Practise Website - https://naveenautomationlabs.com/opencart/index.php?route=account/register
+
+
+
+
+
+
+# Grafana k6
+
+Grafana k6 (previously known as Load Impact) is a modern open-source load testing tool written in GO, using which you can easily assess the performance and scalability of the applications by simulating real-life user traffic.
+k6 uses JavaScript as its scripting language, which makes it highly accessible to developers and testers familiar with JavaScript. It provides a straightforward and flexible scripting interface for defining test scenarios and simulating user behavior.
+
+
+# Install - K6
+
+**1) Install K6**
+
+MAC OS => brew install k6
+
+Windows => winget install k6
+
+# Run test scripts using - K6
+
+ Run the test case using the below command**
+
+1. API => k6 run <test_script.js>
+2. Browser Headless Mode => k6 run <test_script.js>
+3. Browser UI Mode => K6_BROWSER_HEADLESS=false k6 run <test_script.js>
+
+
+
+
+
+
+
+
+
+# Cypress-Docker-Testing
+
+This repository provides a sample project that demonstrates how to use Cypress tests with Docker containers. By running Cypress in a Docker container, you can easily set up a consistent and reproducible environment for your tests.
+
+,Cypress supports below docker images
+<img width="862" alt="image" src="https://user-images.githubusercontent.com/10338077/232113265-97572a4c-b9fd-4cd1-a762-f8c8e9f21c3b.png">
+
+
+# Prerequisites
+=================
+
+Install:
+
+Docker
+Node.js
+
+# Run Headless Cypress test locally using Docker Image
+Docker Image contains both Cypress and OS dependencies which can be used to run Cypress test.As of today ( March 2023), there are 4 images provided for running Cypress in Docker.
+
+cypress/factory
+cypress/base
+cypress/browsers
+cypress/included
+
+There are multiple ways in which Cypress tests can be run in Docker containers. One of the ways is to run using the following command from the root of your project.
+
+"<docker run -it -v $PWD:/e2e -w /e2e cypress/included:12.8.1>"
+
+# Run Cypress on Chrome and Firefox Browser Using Docker Image
+
+Running Cypress tests on specific browser versions can be necessary to ensure compatibility with the target environment. Different browsers like Firefox and Chrome may have varying feature sets and behaviors that can affect the test results.
+
+By default, Cypress runs the tests on Electron browser but if you want to run Cypress tests on Chrome and Firefox browsers using a Docker image. Then, you can follow the below commands.
+
+
+"< docker run -it -v $PWD:/e2e -w /e2e cypress/included:12.8.1 --browser firefox >"
+
+# Run Cypress tests in headless mode using Dockerfile
+
+Running Cypress tests with Docker can help catch and fix issues early in the development process, saving time and resources down the line.if you want to use a customized script and run it using Docker. In that case, you can use Dockerfile.
+
+You can refer to Dockerfile created at the root level. After creating a Dockerfile, next process is
+
+1) Building a Dockerfile
+To build the Docker image, navigate to the directory containing your Dockerfile and run the following command: 
+
+" <docker build -t <image_name> . >"
+
+2) After the docker image is built, you can verify by running it,by running the command 
+    "<docker images>"
+  
+3) Run the docker image after building it by using the command : 
+    "<docker run imagename:tagename .>"
+  
+
+
+
+
+# Run Cypress test on multiple browsers Using Docker Compose
+
+The Docker Compose file is a YAML file that defines how Docker containers should be built, configured, and run as a single service or application. With the Docker Compose file, you can define multiple containers and their configuration in a single file, making it easier to manage and deploy complex Cypress testing environments.
+
+Once you create docker compose file . You can run the test in docker container using the command
+
+"< docker-compose up >"
+
+
+# Run Cypress test on Cloud Grid Using Docker file
+
+Cypress testing on a cloud platform (like LambdaTest) helps you attain accelerated test execution as well as improved browser coverage. There are multiple ways to perform Cypress testing on a cloud testing platform like LambdaTest. One of them is using Docker.
+
+To use Dockerfile, follow below steps
+
+1) Build Docker Image  "docker build -t <image_name> . "
+2) Docker Login : docker login
+3) Docker Tag : docker tag imagename:tag dockerUsername/imagename:tag
+4) Docker Push : docker push dockerUsername/image-name:v1
+5) Docker Run : docker run <image_name>:<tag_name> 
+
+
+
+# Run Cypress Test in Docker Container on CI.CD(GitHub Actions)
+
+GitHub Actions is a powerful CI/CD platform that enables you to automate workflows for building, testing, and publishing software across multiple platforms, operating systems, and programming languages. With GitHub Actions, you can even see the status checks displayed within the pull request.
+
+One of the significant advantages of using GitHub Actions is that it allows you to execute Cypress tests in a Docker container, providing a self-contained and repeatable environment for testing.
+
+
+There is an existing Docker image that already includes Chrome version 87 and Firefox version 82 pre-installed, which you can use to run Cypress tests. To leverage this image, you can pass the container image as an argument. Once the test cases are executed, the container is automatically stopped.
+
+Create .yml in ".github/workflows/build.yml" and add the code for running test case in docker container
+
+"<container: cypress/browsers:node12.13.0-chrome78-ff70>"
+  
+
+
+
+# Bonus: Top Docker Commands
+  
+Sharing some useful Docker commands.
+
+
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/10338077/232119538-c6602213-a57e-4716-a1d6-74d35f0b56c2.png">
+
+
+
+
+
