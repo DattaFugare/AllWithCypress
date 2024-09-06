@@ -18,8 +18,7 @@ When('I send a  request {string}',(method)=>{
 
         cy.api(method,url).then((res)=>{
 
-            Response=res  
-    
+            Response=res  ;
         })
 })
 

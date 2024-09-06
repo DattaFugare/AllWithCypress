@@ -25,7 +25,7 @@ When('I send a POST request with {string} and {string}', (email, password) => {
 Then('the response code should be {string}', (statusCode) => {
     cy.get('@response').then((response) => {
       expect(response.status.toString()).to.eq(statusCode);
-    });
+    })
   });
   
   Then('the response message should be {string}', (message) => {
