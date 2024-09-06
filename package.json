@@ -16,5 +16,8 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "step_definitions": "cypress/integration/Steps/"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.2"
   }
 }
