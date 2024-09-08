@@ -17,5 +17,10 @@
 import './commands'
 import 'cypress-cucumber-preprocessor/steps'
 import 'cypress-plugin-api'
+import 'cypress-file-upload';
+import "cypress-real-events";
+require('@cypress/skip-test/support')
+// import '@faker-js/faker'
+// import 'neat-csv'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
